@@ -38,10 +38,15 @@ fun mainScreen(){
 
     val cardList = getMagicCardList()
     var seleccion by remember { mutableStateOf(cardList[0].nombre) }
-    var onSelection : (String) -> Unit = {seleccion = it}
+    // var onSelection : (String) -> Unit = {seleccion = it}
 
     var currentRating by remember { mutableIntStateOf(0) }
     val onRatingChange: (Int) -> Unit = {currentRating = it}
+
+    val onSelection: (String) -> Unit = { nuevaCarta ->
+        seleccion = nuevaCarta
+        currentRating = 0   // 🔥 Reinicia las estrellas
+    }
 
     val tipoMensaje = mostrarMensaje(seleccion, currentRating)
     val snackbarHostState = remember { SnackbarHostState() }
