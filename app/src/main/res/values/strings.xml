@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestExamenCartas</string>
+    <string-array name="cartas">
+        <item>Carta 1</item>
+        <item>Carta 2</item>
+        <item>Carta 3</item>
+        <item>Carta 4</item>
+        <item>Carta 5</item>
+    </string-array>
+</resources>
